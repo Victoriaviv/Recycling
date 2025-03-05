@@ -9,10 +9,10 @@ const Footer = () => {
         
         {/* Column 1 - About */}
         <div className="footer-about">
-          <h3>RECA</h3>
+          <h3>EcoHub</h3>
           <p>
-            Rwanda Eco-Conservation Alliance is dedicated to environmental protection through sustainable waste 
-            management and recycling initiatives.
+           EcoHub essentially means a central platform or space dedicated to eco-friendly initiatives, solutions, or services. 
+          
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Column 3 - Contact Info */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p>Email: info@reca.org</p>
+          <p>Email: info@ecohub.org</p>
           <p>Phone: +250 788 123 456</p>
           <p>Address: Kigali, Rwanda</p>
         </div>
@@ -49,7 +49,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} RECA. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} EcoHub. All Rights Reserved.</p>
       </div>
     </footer>
   );
