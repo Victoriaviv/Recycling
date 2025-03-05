@@ -17,13 +17,16 @@
 .navbar ul li{
     color: black;
    margin-left: 3rem;
-   text-decoration: none;
+ 
+   text-decoration-line:none;
 }
 .navbar{
-border: solid 1px black;
+background-color: white;
 width: 98%;
-    padding: 15px;
-    /* position: fixed; */
+    padding: 5px;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -1rem;
 }
 .navbar user{
     color: red;

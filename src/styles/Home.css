@@ -82,31 +82,37 @@
     border-radius: 6px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-top: 3rem;
   }
   
   .title {
-    font-size: 42px;
+    font-size: 50px;
     font-weight: bold;
     color: #003a1b;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
     font-weight: bold;
     margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
   }
   
   .description {
     font-size: 16px;
     color: #555;
     margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
   }
   
   .features {
     display: flex;
-    gap: 40px;
-    margin-top: 30px;
+    gap: 70px;
+    margin-top: 25px;
   }
   
   .feature-item {
@@ -117,6 +123,12 @@
     font-weight: bold;
     color: #004d25;
   }
+  .feature-item p{
+    color: #004d25;
+    margin-top: 6rem;
+    margin-left: -3rem;
+    font-size: 20px;
+  }
   
   .icon {
     font-size: 24px;
@@ -124,10 +136,10 @@
   }
   
   .recycling-image {
-    width:35%;
+    width:40%;
     position: relative;
-    margin-left: 50rem;
-    margin-top: -20rem;
+    margin-left: 40rem;
+    margin-top: -35rem;
   }
   
   .recycling-image img {
@@ -155,5 +167,8 @@
   
   .stat-box p {
     font-size: 16px;
+  }
+  .recycling-section{
+    margin-left: 10rem;
   }
   

@@ -22,30 +22,33 @@ function Home() {
       {/* Left Content */}
       <div className="recycling-text">
         <span className="badge">WASTE DISPOSAL & RECYCLING SERVICES IN COMMERCIAL & DOMESTIC</span>
-        <h2 className="title">The Pioneers In The
+        <h2 className="title">The Pioneers In The<br/>
              Recycling Service!</h2>
         <p className="subtitle">
-          We are providing effective waste disposal & recycling services with our modern technologies.
-          Our priority is always the client.
+          We are providing effective waste disposal & recycling services<br/>
+           with our modern technologies,we serve commonly, client first<br/>
+           priority.
+
         </p>
         <p className="description">
-          How can we create a better environment for the future through waste recycling? We believe the
-          best strategy is to stop waste from entering the ocean in the first place.
+          How can we create a better environment for the future through waste recycling?<br/>
+           We believe thebest strategy is to stop waste from entering the ocean <br/>
+           in the first place.
         </p>
 
         {/* Features Section */}
         <div className="features">
           <div className="feature-item">
             <FaBriefcase className="icon" />
-            <p>Ontime Scheduled</p>
+            <p>Ontime<br/> Scheduled</p>
           </div>
           <div className="feature-item">
             <FaClock className="icon" />
-            <p>24/7 Services</p>
+            <p>24/7<br/> Services</p>
           </div>
           <div className="feature-item">
             <FaMoneyBillWave className="icon" />
-            <p>Affordable Cost</p>
+            <p>Affordable<br/> Cost</p>
           </div>
         </div>
       </div>
@@ -53,10 +56,7 @@ function Home() {
       {/* Right Image Section */}
       <div className="recycling-image">
         <img src={recycling} alt="Recycling People" />
-        <div className="stat-box">
-          <h3>2463</h3>
-          <p>Happy Customers</p>
-        </div>
+      
       </div>
     </section>
     </div>
