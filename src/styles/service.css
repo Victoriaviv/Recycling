@@ -6,6 +6,11 @@
     margin-left: 70px;
     margin-right: 70px;
     grid-template-columns: repeat(3,1fr);
+    background-color: #F6F6F6;
+    
+  }
+  .body{
+    background-color: #F6F6F6;
   }
   
   .recycling-card {

@@ -8,12 +8,14 @@ function Navbar(){
       <div className="navbar">
        
       <ul>
+
        <li><Link to="/">Home</Link></li>
        <li><Link to="/Pages">Pages</Link></li>
        <li><Link to="/Service">Service</Link></li>
-       <li><Link to="">Blog</Link></li>
+       <li><Link to="/Blog">Blog</Link></li>
        <li><Link to="">Contact</Link></li>
-       <FaUserCircle className="user" />
+       {/* <FaUserCircle className="user" /> */}
+       <button className="login">login</button>
        </ul>
       
        </div>

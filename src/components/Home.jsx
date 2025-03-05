@@ -19,7 +19,7 @@ function Home() {
     
     </div>
     <section className="recycling-section">
-      {/* Left Content */}
+      
       <div className="recycling-text">
         <span className="badge">WASTE DISPOSAL & RECYCLING SERVICES IN COMMERCIAL & DOMESTIC</span>
         <h2 className="title">The Pioneers In The<br/>
@@ -36,7 +36,7 @@ function Home() {
            in the first place.
         </p>
 
-        {/* Features Section */}
+        
         <div className="features">
           <div className="feature-item">
             <FaBriefcase className="icon" />
@@ -53,7 +53,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Right Image Section */}
+      
       <div className="recycling-image">
         <img src={recycling} alt="Recycling People" />
       
