@@ -1,14 +1,15 @@
 import React from "react";
-import "../styles/footer.css"; // Import the CSS
+import "../styles/footer.css"; 
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-
+import logo from "../assets/logo.png";
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         
-        {/* Column 1 - About */}
+      
         <div className="footer-about">
+        <div className="log"><img src={logo} alt="logo"/></div>
           <h3>EcoHub</h3>
           <p>
            EcoHub essentially means a central platform or space dedicated to eco-friendly initiatives, solutions, or services. 
@@ -16,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Column 2 - Quick Links */}
+       
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
@@ -27,7 +28,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3 - Contact Info */}
+        
         <div className="footer-contact">
           <h4>Contact Us</h4>
           <p>Email: info@ecohub.org</p>
@@ -35,7 +36,7 @@ const Footer = () => {
           <p>Address: Kigali, Rwanda</p>
         </div>
 
-        {/* Column 4 - Social Media */}
+      
         <div className="footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
@@ -47,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
+   
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} EcoHub. All Rights Reserved.</p>
       </div>

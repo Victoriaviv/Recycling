@@ -1,14 +1,15 @@
 import React from "react";
 import { Outlet,Link } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
+import logo from "../assets/logo.png";
 import "../styles/navbar.css"
 function Navbar(){
     return(
         <div>
+         
       <div className="navbar">
-       
+      <div className="logo"><img src={logo} alt="logo"/></div>
       <ul>
-
+     
        <li><Link to="/">Home</Link></li>
        <li><Link to="/Pages">Pages</Link></li>
        <li><Link to="/Service">Service</Link></li>

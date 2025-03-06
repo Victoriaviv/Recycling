@@ -13,7 +13,8 @@
     color: white;
     padding: 30px;
     border-radius: 8px;
-    height: 38rem;
+    height: 32rem;
+    margin-top: 5rem;
     font-family: Arial, Helvetica, sans-serif;
   }
   .cont{
@@ -41,6 +42,7 @@
     background: white;
     padding: 30px;
     border-radius: 8px;
+    margin-top: 5rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -55,7 +57,7 @@
    font-weight: lighter;
     font-size:medium;
     margin-top: 3rem;
-    margin-bottom: -2rem;
+    margin-bottom: rem;
   }
   
   .contact-form p {

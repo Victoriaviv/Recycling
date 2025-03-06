@@ -5,7 +5,8 @@ import Home from "./components/Home.jsx";
 import Service from "./components/Service.jsx";
 import Blog from "./components/Blogs.jsx";
 import Contact from "./components/Contact.jsx";
-import Pages from "./components/Pages.jsx"
+import Pages from "./components/Pages.jsx";
+import DashbordLayout from "./Dashboard/DashboardLayout.jsx";
 function App(){
 return(
 <BrowserRouter>
@@ -17,6 +18,9 @@ return(
         <Route path="/Pages" element={<Pages/>}/>
         <Route path="/Contact" element={<Contact/>}/>
 
+          </Route>
+          <Route path="/"element={<DashbordLayout/>}>
+          <Route path="/dashbord"index element={<Dashbordview/>}/>
           </Route>
      </Routes>
   </BrowserRouter>
