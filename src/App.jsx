@@ -20,7 +20,7 @@ return(
 
           </Route>
           <Route path="/"element={<DashbordLayout/>}>
-          <Route path="/dashbord"index element={<Dashbordview/>}/>
+         
           </Route>
      </Routes>
   </BrowserRouter>
