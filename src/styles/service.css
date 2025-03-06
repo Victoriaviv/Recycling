@@ -66,4 +66,32 @@
   .read-more:hover {
     text-decoration: underline;
   }
+  .service-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url("../assets/service7.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .service-overlay {
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .servicetitle {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
   

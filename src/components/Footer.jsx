@@ -20,8 +20,8 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
+            <li><a href="/pages">About Us</a></li>
+            <li><a href="/service">Our Services</a></li>
             <li><a href="/contact">Contact</a></li>
        
           </ul>

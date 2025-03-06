@@ -13,7 +13,7 @@ function Navbar(){
        <li><Link to="/Pages">Pages</Link></li>
        <li><Link to="/Service">Service</Link></li>
        <li><Link to="/Blog">Blog</Link></li>
-       <li><Link to="">Contact</Link></li>
+       <li><Link to="/Contact">Contact</Link></li>
        {/* <FaUserCircle className="user" /> */}
        <button className="login">login</button>
        </ul>

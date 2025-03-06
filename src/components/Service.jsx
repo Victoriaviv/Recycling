@@ -56,8 +56,14 @@ const recyclingCategories = [
   }
 ];
 
-const RecyclingCategories = () => {
+const Service = () => {
   return (
+<div >
+<div className="service-header">
+      <div className="service-overlay">
+        <h1 className="servicetitle"> Services</h1>
+      </div>
+      </div>
     <div className="recycling-container">
       {recyclingCategories.map((category) => (
         <div key={category.id} className="recycling-card">
@@ -71,7 +77,9 @@ const RecyclingCategories = () => {
         </div>
       ))}
     </div>
+    </div>
+    
   );
 };
 
-export default RecyclingCategories;
+export default Service;
