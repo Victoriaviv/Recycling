@@ -149,7 +149,7 @@
   
   .recycling-image {
     width:40%;
-    position: relative;
+    /* position: relative; */
     margin-left: 40rem;
     margin-top: -35rem;
   }
@@ -159,7 +159,7 @@
     border-radius: 10px;
     margin-bottom: 3rem;
     margin-top: 3rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
   }
   
   .stat-box {

@@ -1,11 +1,20 @@
 import React from "react";
 import { Outlet,Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useState } from "react";
 import "../styles/navbar.css"
+import Login from "../components/Login.jsx";
 function Navbar(){
+
+  const [modal,setModal] = useState(false);
+
+const changeModal = () => {
+  setModal(!modal)
+}
+
     return(
-        <div>
-         
+        <div >
+         {modal && <Login changeModal = {changeModal}/>}
       <div className="navbar">
       <div className="logo"><img src={logo} alt="logo"/></div>
       <ul>
@@ -16,8 +25,9 @@ function Navbar(){
        <li><Link to="/Blog">Blog</Link></li>
        <li><Link to="/Contact">Contact</Link></li>
        {/* <FaUserCircle className="user" /> */}
-       <button className="login">login</button>
+       
        </ul>
+       <button className="login"onClick={changeModal}>login</button>
       
        </div>
      </div>
