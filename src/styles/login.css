@@ -34,7 +34,7 @@
     
 }
 .button:hover{
-    background-color:rgb(27, 27, 54);
+    background-color:green;
 }
 .forms input{
     background-color:white;
@@ -52,7 +52,7 @@
     margin-top: -2rem;
 }
 .forms p3{
-    color: blue;
+    color:green;
     margin-left: 120px;
     font-size: 20px;
     margin-top: -2rem;
@@ -64,11 +64,11 @@
     padding-top: -20px;
 }
 .iconclose:hover{
-    color: blue;
+    color: #47893A;
    
     }
 /* a{
-    color: blue;
+    color:green;
     margin-left: 7rem;
     font-family:'Times New Roman', Times, serif;
     font-size: 15px;

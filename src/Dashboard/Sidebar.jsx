@@ -18,7 +18,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/posts" className="sidebar-link">
+            <Link to="/Post" className="sidebar-link">
               <FaFileAlt className="icon" /> Posts
             </Link>
           </li>
