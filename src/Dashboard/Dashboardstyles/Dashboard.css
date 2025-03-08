@@ -1,17 +1,91 @@
-.dashboard {
-    display: flex;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .new-post-btn {
-    background-color: blue;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-  }
-  
+.dashboard-container {
+  display: flex;
+}
+
+.dashboard-content {
+  margin-left: 250px;
+  width: 100%;
+  padding: 20px;
+  background: #ffe6e6;
+}
+
+.dashboard-main {
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.new-post {
+  background: blue;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.posts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.post-card {
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.post-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit {
+  background: blue;
+  color: white;
+}
+
+.unpublish {
+  background: orange;
+  color: white;
+}
+
+.delete {
+  background: red;
+  color: white;
+}
