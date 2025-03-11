@@ -96,4 +96,36 @@
     font-size: 14px;
     color: gray;
   }
+  .comment-section {
+    margin-top: 10px;
+  }
+  
+  .comment-input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #008cba;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .comments-list {
+    margin-top: 10px;
+  }
+  
+  .comment {
+    background: #f3f3f3;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
   

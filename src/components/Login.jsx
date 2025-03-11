@@ -1,25 +1,40 @@
-import React from "react";
-import { useState } from "react";
-import"../styles/login.css";
+
+import React, { useState } from "react";
+import "../styles/login.css";
 import { IoCloseSharp } from "react-icons/io5";
 
-const Login = ({changeModal})=> {
+const Login = ({ changeModal }) => {
     const [isSignup, setIsSignup] = useState(false);
-    return(
-        
+
+    return (
         <div className="formscontainer">
-            <form className="forms" >
+            <form className="forms">
                 <IoCloseSharp className="iconclose" onClick={changeModal} />
-                <input type="text" placeholder="enter username" required/>
-                <input type="email" placeholder="enter email" required/>
-                <button type="login"className="button">Login</button>
-                <a href="#">forgot password?</a>
-                <p4 >Do not have an account</p4>
-               
+
+                {isSignup ? (
+                    <>
+                        <h2>Register</h2>
+                        <input type="text" placeholder="Enter username" required />
+                        <input type="email" placeholder="Enter email" required />
+                        <input type="password" placeholder="Enter password" required />
+                        <button type="submit" className="button">Register</button>
+                        <p>Already have an account?</p>
+                        <a href="#" onClick={() => setIsSignup(false)}>Login here</a>
+                    </>
+                ) : (
+                    <>
+                        <h2>Login</h2>
+                        <input type="text" placeholder="Enter username" required />
+                        <input type="email" placeholder="Enter email" required />
+                        <button type="submit" className="button">Login</button>
+                        {/* <a href="#">Forgot password?</a> */}
+                        <p>Do not have an account?</p>
+                        <a href="#" onClick={() => setIsSignup(true)}>Sign up here</a>
+                    </>
+                )}
             </form>
-            
-            
         </div>
     );
-} 
-export default Login ;
+}
+
+export default Login;

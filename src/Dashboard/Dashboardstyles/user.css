@@ -1,0 +1,78 @@
+.users-table-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+  
+   
+
+  }
+  
+  .users-table-container h2 {
+    text-align: center;
+   
+    margin-top: 10rem;
+  }
+  
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 5rem;
+  }
+  
+  .users-table th, .users-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .users-table th {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .users-table tr:hover {
+    background: #f1f1f1;
+  }
+  
+ 
+  .active {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .inactive {
+    color: red;
+    font-weight: bold;
+  }
+  
+ 
+  .activate-btn {
+    padding: 5px 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .activate-btn:hover {
+    background: darkgreen;
+  }
+  
+  .deactivate-btn {
+    padding: 5px 10px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .deactivate-btn:hover {
+    background: darkorange;
+  }
+  

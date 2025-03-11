@@ -6,16 +6,15 @@ import "./Dashboardstyles/sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      {/* Logo / Branding */}
+   
       <div className="sidebar-header">Admin Dashboard</div>
 
-      {/* Navigation Links */}
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <Link to="/" className="sidebar-link">
+            {/* <Link to="/" className="sidebar-link">
               <FaHome className="icon" /> Home
-            </Link>
+            </Link> */}
           </li>
           <li>
             <Link to="/Post" className="sidebar-link">
@@ -23,19 +22,19 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/comments" className="sidebar-link">
+            <Link to="/Comment" className="sidebar-link">
               <FaComments className="icon" /> Comments
             </Link>
           </li>
           <li>
-            <Link to="/users" className="sidebar-link">
+            <Link to="/User" className="sidebar-link">
               <FaUsers className="icon" /> Users
             </Link>
           </li>
         </ul>
       </nav>
 
-      {/* Logout Button */}
+     
       <div className="sidebar-footer">
         <button className="logout-btn">
           <FaSignOutAlt className="icon" /> Logout

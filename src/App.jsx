@@ -9,8 +9,9 @@ import Pages from "./components/Pages.jsx";
 import DashboardLayout from "./Dashboard/DashboardLayout.jsx";
 // import Sidebar from "./Dashboard/Sidebar.jsx";
 import Post from "./Dashboard/Post.jsx";
-
-import Dashboardview from "./Dashboard/Dashboardview.jsx"
+import Comment from "./Dashboard/Comment.jsx";
+import User from "./Dashboard/User.jsx"
+// import Dashboardview from "./Dashboard/Dashboardview.jsx"
 function App(){
 return(
 <BrowserRouter>
@@ -24,8 +25,12 @@ return(
 
           </Route>
           <Route path="/"element={<DashboardLayout/>}>
-          <Route path="/dashboard"index element={<Dashboardview/>}/>
+          {/* <Route path="/dashboard"index element={<Dashboardview/>}/> */}
           <Route path="/Post"element={<Post/>}/>
+          <Route path="/Comment"element={<Comment/>}/>
+          <Route path="/User"element={<User/>}/>
+         
+
 
           </Route>
      </Routes>
