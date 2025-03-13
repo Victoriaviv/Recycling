@@ -3,6 +3,7 @@ import { Outlet,Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useState } from "react";
 import "../styles/navbar.css"
+
 import Login from "../components/Login.jsx";
 function Navbar(){
 

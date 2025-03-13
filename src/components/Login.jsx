@@ -1,40 +1,76 @@
-
 import React, { useState } from "react";
-import "../styles/login.css";
-import { IoCloseSharp } from "react-icons/io5";
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import { Notify } from "notiflix";
+import Register from "./Register";
+import { IoClose } from "react-icons/io5";
 
 const Login = ({ changeModal }) => {
-    const [isSignup, setIsSignup] = useState(false);
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+    const onSubmit = async (data) => {
+        try {
+            const { userEmail, userPassword } = data;
+            const formData = new FormData();
+            formData.append("userEmail", userEmail);
+            formData.append("userPassword", userPassword);
+
+            const response = await axios.post(`http://localhost:8080/user/login`, formData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            Notify.success("Login successful");
+            reset();
+            
+            const userToken = response.data;
+            localStorage.setItem("userToken", JSON.stringify(userToken));
+            const Role = userToken?.User?.userRole;
+            if (Role === "Admin") {
+               
+                 navigate("/Post");
+            } else {
+              
+             navigate("/Home");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    const [isSignup, setIsSignup] = useState(true); 
 
     return (
         <div className="formscontainer">
-            <form className="forms">
-                <IoCloseSharp className="iconclose" onClick={changeModal} />
-
-                {isSignup ? (
-                    <>
-                        <h2>Register</h2>
-                        <input type="text" placeholder="Enter username" required />
-                        <input type="email" placeholder="Enter email" required />
-                        <input type="password" placeholder="Enter password" required />
-                        <button type="submit" className="button">Register</button>
-                        <p>Already have an account?</p>
-                        <a href="#" onClick={() => setIsSignup(false)}>Login here</a>
-                    </>
-                ) : (
-                    <>
-                        <h2>Login</h2>
-                        <input type="text" placeholder="Enter username" required />
-                        <input type="email" placeholder="Enter email" required />
-                        <button type="submit" className="button">Login</button>
-                        {/* <a href="#">Forgot password?</a> */}
-                        <p>Do not have an account?</p>
-                        <a href="#" onClick={() => setIsSignup(true)}>Sign up here</a>
-                    </>
-                )}
-            </form>
+           {isSignup ? (
+        <form className="forms" onSubmit={handleSubmit(onSubmit)}>
+            
+            
+            <h2>Login</h2>
+            <IoClose className="iconclose" onClick={changeModal} />
+            <input
+                type="email"
+                placeholder="Enter email"
+                {...register("userEmail", { required: true })}
+            />
+            <input
+                type="password"
+                placeholder="Enter password"
+                {...register("userPassword", { required: true })}
+            />
+            <button type="submit" className="button">
+                Login
+            </button>
+            <p>Don't have an account?</p>
+            <a href="#" onClick={() => setIsSignup(false)}>
+                        signup here
+                    </a>
+        </form>
+           ) : (
+            <Register changeModal={changeModal} /> // Show Login component when state is false
+        )}
         </div>
     );
-}
+};
 
 export default Login;

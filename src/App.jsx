@@ -22,7 +22,7 @@ return(
         <Route path="/Blog" element={<Blog/>}/>
         <Route path="/Pages" element={<Pages/>}/>
         <Route path="/Contact" element={<Contact/>}/>
-
+        
           </Route>
           <Route path="/"element={<DashboardLayout/>}>
           {/* <Route path="/dashboard"index element={<Dashboardview/>}/> */}

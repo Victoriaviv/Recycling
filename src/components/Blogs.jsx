@@ -178,9 +178,9 @@ const Blog = () => {
 
             <div className="blog-content">
               <div className="blog-meta">
-                <span className="admin-icon">
+                {/* <span className="admin-icon">
                   <LuCircleUserRound className="blo" /> Admin
-                </span>
+                </span> */}
                 <span className="comment-icon" onClick={() => handleCommentClick(blog.id)}>
                   <FaRegCommentDots className="blo" /> Comment
                 </span>
