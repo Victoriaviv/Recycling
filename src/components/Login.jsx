@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
-import { useForm } from "react-hook-form";
+import { Navigate } from "react-router-dom";
+import { useState } from "react";
+import { set, useForm } from "react-hook-form";
 import { Notify } from "notiflix";
 import Register from "./Register";
 import { IoClose } from "react-icons/io5";
@@ -29,15 +31,16 @@ const Login = ({ changeModal }) => {
             const Role = userToken?.User?.userRole;
             if (Role === "Admin") {
                
-                 navigate("/Post");
+                 Navigate("/Post");
             } else {
               
-             navigate("/Home");
+             Navigate("/Home");
             }
         } catch (error) {
             console.log(error);
         }
     };
+
     const [isSignup, setIsSignup] = useState(true); 
 
     return (
