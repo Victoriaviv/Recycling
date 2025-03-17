@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { set, useForm } from "react-hook-form";
 import { Notify } from "notiflix";
@@ -8,6 +8,7 @@ import Register from "./Register";
 import { IoClose } from "react-icons/io5";
 
 const Login = ({ changeModal }) => {
+    const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = async (data) => {
@@ -17,7 +18,7 @@ const Login = ({ changeModal }) => {
             formData.append("userEmail", userEmail);
             formData.append("userPassword", userPassword);
 
-            const response = await axios.post(`http://localhost:8080/user/login`, formData, {
+            const response = await axios.post(`http://localhost:5000/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -28,13 +29,13 @@ const Login = ({ changeModal }) => {
             
             const userToken = response.data;
             localStorage.setItem("userToken", JSON.stringify(userToken));
-            const Role = userToken?.User?.userRole;
+            const Role = userToken?.user?.userRole;
             if (Role === "Admin") {
                
-                 Navigate("/Post");
+                 navigate("/Post");
             } else {
               
-             Navigate("/Home");
+             navigate("/Pages");
             }
         } catch (error) {
             console.log(error);

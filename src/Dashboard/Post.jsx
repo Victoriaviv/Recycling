@@ -8,7 +8,8 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdOutlineUnpublished } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
-
+import axios from "axios";
+import { useEffect } from "react";
 const posts = [
   {
     id: 1,
@@ -59,6 +60,20 @@ const Post = () => {
     alert("Post Created!");
     setShowForm(false);
   };
+  const[blog,setBlogs]=useState([]);
+    useEffect(()=>{
+
+        const getBlogs=async()=>{
+            try{
+          const res=await axios.get(`http://localhost:8080/blog/getAllblog`);
+          setBlogs(res.data)
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
+        getBlogs();
+    },[])
 
   return (
     <div className="dashboard-container">

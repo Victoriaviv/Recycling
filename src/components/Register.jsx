@@ -25,7 +25,7 @@ const Register = ({ changeModal }) => {
             formData.append("userEmail", userEmail);
             formData.append("userPassword", userPassword);
 
-            const response = await axios.post(`http://localhost:8080/user/register`, formData, {
+            const response = await axios.post(`http://localhost:5000/user/register`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },

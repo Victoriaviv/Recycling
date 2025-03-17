@@ -76,20 +76,7 @@ const Blog = () => {
     });
     setNewComment("");
   };
-  const[blog,setBlogs]=useState([]);
-    useEffect(()=>{
-
-        const getBlogs=async()=>{
-            try{
-const res=await axios.get(`http://localhost:8080/blog/getAllblog`);
-setBlogs(res.data)
-            }
-            catch(error){
-                console.log(error);
-            }
-        }
-        getBlogs();
-    },[])
+  
 
   return (
     <div>
