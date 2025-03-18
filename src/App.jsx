@@ -18,6 +18,7 @@ return(
       <Routes>
         <Route path="/" element={<Layout/>}>
         <Route path="/" index element={<Home/>}/>
+        <Route path="/Home" element={<Home/>}/>
         <Route path="/Service" element={<Service/>}/>
         <Route path="/Blog" element={<Blog/>}/>
         <Route path="/Pages" element={<Pages/>}/>

@@ -35,7 +35,7 @@ const Login = ({ changeModal }) => {
                  navigate("/Post");
             } else {
               
-             navigate("/Pages");
+             navigate("/Home");
             }
         } catch (error) {
             console.log(error);

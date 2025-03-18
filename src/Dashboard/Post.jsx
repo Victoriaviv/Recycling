@@ -65,7 +65,7 @@ const Post = () => {
 
         const getBlogs=async()=>{
             try{
-          const res=await axios.get(`http://localhost:8080/blog/getAllblog`);
+          const res=await axios.get(`http://localhost:5000/blog/getAllblog`);
           setBlogs(res.data)
             }
             catch(error){

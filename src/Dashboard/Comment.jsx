@@ -1,45 +1,51 @@
-import React, { useState } from "react";
-import "./Dashboardstyles/comment.css"; // Import CSS for styling
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Dashboardstyles/comment.css";
 
-const Comment = () => {
+const Comment = ({ blogId }) => {
+  const [comments, setComments] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const [comments, setComments] = useState([
-    { id: 1, name: "Alice", text: "How can I recycle glass?", date: "2025-03-06", },
-    { id: 2, name: "John", text: "Where can I dispose of electronic waste?", date: "2025-03-05" },
-    { id: 3, name: "Emily", text: "Recycling plastic is very important!", date: "2025-03-04" },
-  ]);
 
-  const handleDelete = (id) => {
-    setComments(comments.filter((comment) => comment.id !== id));
+  const fetchComments = async () => {
+    if (!blogId) return;
+    try {
+      const response = await axios.get(`http://localhost:5000/comment/getCommentsByBlogId/${blogId}`);
+      setComments(response.data.comments);
+    } catch (err) {
+      setError("Failed to fetch comments");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchComments();
+  }, [blogId]);
+
+
+  const handleDelete = async (commentId) => {
+    try {
+      await axios.delete(`http://localhost:5000/comment/deleteComment/${commentId}`);
+      setComments(comments.filter((c) => c._id !== commentId));
+    } catch (err) {
+      console.error("Failed to delete comment");
+    }
   };
 
   return (
-    <div className="comments-table-container">
+    <div className="comments-section">
       <h2>Comments</h2>
-      <table className="comments-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Comment</th>
-            <th>Date</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {comments.map((comment) => (
-            <tr key={comment.id}>
-              <td>{comment.id}</td>
-              <td>{comment.name}</td>
-              <td>{comment.text}</td>
-              <td>{comment.date}</td>
-              <td>
-                <button className="delete-btn" onClick={() => handleDelete(comment.id)}>Delete</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {loading ? <p>Loading...</p> : 
+        comments.length === 0 ? <p>No comments available.</p> : 
+        comments.map((comment) => (
+          <div key={comment._id} className="comment">
+            <p><strong>{comment.name || "Anonymous"}:</strong> {comment.text}</p>
+            <button onClick={() => handleDelete(comment._id)}>Delete</button>
+          </div>
+        ))
+      }
     </div>
   );
 };

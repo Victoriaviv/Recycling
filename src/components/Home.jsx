@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/Home.css"; 
+import { useNavigate } from "react-router-dom";
 import { FaClock, FaMoneyBillWave, FaBriefcase } from "react-icons/fa";
 import recycling from "../assets/recycling.jpg"
 
 function Home() {
+  const navigate = useNavigate(); 
   return (
     <div>
     <div className="home-container">
@@ -13,7 +15,7 @@ function Home() {
         <p className="home-description">
         "We aim to reduce waste and promote recycling through technology. Our platform provides tools, education, and a marketplace for eco-friendly solutions."
         </p>
-        <button className="home-button">  LEARN MORE  </button>
+        <button className="home-button"onClick={() => navigate("/Pages")}>  LEARN MORE  </button>
          
      
       </div>
