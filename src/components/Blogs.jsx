@@ -21,9 +21,8 @@ const blogs = [
 const Blog = () => {
   const [comments, setComments] = useState({});
   const [activeCommentBox, setActiveCommentBox] = useState(null);
-  const [newComments, setNewComments] = useState({}); 
+  const [newComments, setNewComments] = useState({});
 
-  
   useEffect(() => {
     const fetchComments = async () => {
       try {
@@ -40,23 +39,26 @@ const Blog = () => {
     fetchComments();
   }, []);
 
-
   const handleCommentClick = (blogId) => {
     setActiveCommentBox(blogId === activeCommentBox ? null : blogId);
   };
 
- 
   const handleAddComment = async (blogId) => {
-    if (!newComments[blogId] || newComments[blogId].trim() === "") return;
+    // Check if comment is empty
+    if (!newComments[blogId] || newComments[blogId].trim() === "") {
+      alert("Please write a comment before posting.");
+      return;
+    }
 
     try {
+      // Post new comment to backend
       const response = await axios.post("http://localhost:5000/comment/createComment", {
         blogId,
         text: newComments[blogId],
       });
 
       if (response.data.success) {
-   
+        // Fetch updated comments
         const res = await axios.get(`http://localhost:5000/comment/getCommentsByBlogId/${blogId}`);
         setComments(prevComments => ({
           ...prevComments,
@@ -64,10 +66,11 @@ const Blog = () => {
         }));
       }
 
-     
+      // Clear the input field after posting
       setNewComments(prev => ({ ...prev, [blogId]: "" }));
     } catch (error) {
       console.error("Error posting comment:", error);
+      alert("An error occurred while posting the comment.");
     }
   };
 
@@ -96,7 +99,6 @@ const Blog = () => {
               <h3 className="blog-title">{blog.title}</h3>
               <p className="blog-description">{blog.description}</p>
 
-           
               {activeCommentBox === blog.id && (
                 <div className="comment-section">
                   <input
@@ -108,7 +110,6 @@ const Blog = () => {
                   />
                   <button onClick={() => handleAddComment(blog.id)}>Post</button>
 
-             
                   <div className="comments-list">
                     {comments[blog.id]?.map((comment, index) => (
                       <p key={index} className="comment">{comment}</p>
