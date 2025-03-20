@@ -28,7 +28,7 @@ const Blog = () => {
       try {
         const updatedComments = {};
         for (const blog of blogs) {
-          const response = await axios.get(`http://localhost:5000/comment/getCommentsByBlogId/${blog.id}`);
+          const response = await axios.get(`https://ecohub-2.onrender.com/comment/getCommentsByBlogId/${blog.id}`);
           updatedComments[blog.id] = response.data.comments.map(c => c.text);
         }
         setComments(updatedComments);
@@ -52,14 +52,14 @@ const Blog = () => {
 
     try {
       // Post new comment to backend
-      const response = await axios.post("http://localhost:5000/comment/createComment", {
+      const response = await axios.post("https://ecohub-2.onrender.com/comment/createComment", {
         blogId,
         text: newComments[blogId],
       });
 
       if (response.data.success) {
         // Fetch updated comments
-        const res = await axios.get(`http://localhost:5000/comment/getCommentsByBlogId/${blogId}`);
+        const res = await axios.get(`https://ecohub-2.onrender.com/comment/getCommentsByBlogId/${blogId}`);
         setComments(prevComments => ({
           ...prevComments,
           [blogId]: res.data.comments.map(c => c.text),

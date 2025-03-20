@@ -1,217 +1,176 @@
 .home-container {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    background: url("../assets/background.jpg") no-repeat center center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    background-size: 200% auto;
-    color: white;
-    animation: moveBackground 20s linear infinite;
-   
-  }
-  @keyframes moveBackground {
-    0% {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("../assets/background.jpg") no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-size: 200% auto;
+  color: white;
+  animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
       background-position: 0 0;
-    }
-    100% {
+  }
+  100% {
       background-position: 100% 0;
-    }
   }
-  
-  
-  .home-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-  }
-  
-  .home-content {
-    /* position: relative;  */
-    max-width: 800px;
-    padding: 20px;
-    z-index: 2;
-  }
-  
-  .home-subtitle {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e4c179;
-    text-transform: uppercase;
-  }
-  
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.home-content {
+  max-width: 800px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.home-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e4c179;
+  text-transform: uppercase;
+}
+
+.home-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  word-wrap: break-word; /* Added to prevent overlap */
+}
+
+.home-description {
+  font-size: 20px;
+  margin: 20px 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-button:hover {
+  background-color: #218838;
+}
+
+/* Adjust recycling section */
+.recycling-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: #f8f9fa;
+  flex-wrap: wrap;  /* Added wrap to prevent overflow */
+}
+
+/* Adjust text sections */
+.recycling-text {
+  width: 50%;
+  margin-bottom: 2rem; /* Added margin-bottom for spacing */
+}
+
+.badge {
+  display: inline-block;
+  background: #b2e5c2;
+  color: #005f2f;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 3rem;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #003a1b;
+}
+
+.subtitle, .description {
+  font-size: 18px; /* Reduced size for smaller screens */
+  color: #333;
+  line-height: 25px;
+}
+
+/* Flex layout for features */
+.features {
+  display: flex;
+  gap: 70px;
+  margin-top: 25px;
+  justify-content: center;  /* Centered items */
+}
+
+/* Feature item styles */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #004d25;
+}
+
+/* Adjust image section */
+.recycling-image {
+  width: 40%;
+  margin-top: 2rem;
+}
+
+.recycling-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
   .home-title {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-  .home-description {
-    font-size: 20px;
-    margin: 20px 0;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .home-button {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .home-button:hover {
-    background-color: #218838;
-  }
-  recycling-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 10%;
-    background: #f8f9fa;
-  }
-  
-  .recycling-text {
-    width: 50%;
-  }
-  
-  .badge {
-    display: inline-block;
-    background: #b2e5c2;
-    color: #005f2f;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    margin-top: 3rem;
-  }
-  
-  .title {
-    font-size: 50px;
-    font-weight: bold;
-    color: #003a1b;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .subtitle {
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-    margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 25px;
-  }
-  
-  .description {
-    font-size: 16px;
-    color: #555;
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 25px;
-  }
-  
-  .features {
-    display: flex;
-    gap: 70px;
-    margin-top: 25px;
-  }
-  
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #004d25;
-  }
-  .feature-item p{
-    color: #004d25;
-    margin-top: 6rem;
-    margin-left: -3rem;
-    font-size: 20px;
-  }
-  
-  .icon {
-    font-size: 24px;
-    color: #007b45;
-  }
-  
-  .recycling-image {
-    width:40%;
-    /* position: relative; */
-    margin-left: 40rem;
-    margin-top: -35rem;
-  }
-  
-  .recycling-image img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
-  }
-  
-  .stat-box {
-    position: absolute;
-    bottom: -20px;
-    right: 10%;
-    background: #008c4a;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .stat-box h3 {
-    font-size: 32px;
-    font-weight: bold;
-  }
-  
-  .stat-box p {
-    font-size: 16px;
-  }
-  .recycling-section{
-    margin-left: 10rem;
-  }
-  @media screen and (max-width: 768px) {
-    .home-title {
       font-size: 35px;
-    }
-    .home-description {
+      text-align: center; /* Centered text */
+  }
+  .home-description {
       font-size: 16px;
-    }
-    .home-button {
+  }
+  .home-button {
       font-size: 14px;
       padding: 10px 20px;
-    }
-    .features {
-      /* flex-direction: column; */
-      /* align-items: center; */
-      margin-left: -10rem;
-    }
-    .recycling-section {
+  }
+  .recycling-section {
       flex-direction: column;
-      text-align: center;
       padding: 20px;
-    }
-    .recycling-text, .recycling-image {
+      text-align: center;
+  }
+  .recycling-text, .recycling-image {
       width: 100%;
-    }
-    .recycling-image img {
+  }
+  .features {
+      flex-direction: column;  /* Stacked layout for small screens */
+      align-items: center;
+      gap: 30px; /* More spacing between items */
+  }
+  .recycling-image img {
       width: 80%;
       max-width: 400px;
-    }
   }
-    
+}
+

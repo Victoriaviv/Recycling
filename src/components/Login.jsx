@@ -18,7 +18,7 @@ const Login = ({ changeModal }) => {
             formData.append("userEmail", userEmail);
             formData.append("userPassword", userPassword);
 
-            const response = await axios.post(`http://localhost:5000/user/login`, formData, {
+            const response = await axios.post(`https://ecohub-2.onrender.com/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
