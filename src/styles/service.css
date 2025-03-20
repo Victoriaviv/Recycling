@@ -94,4 +94,63 @@
     margin-bottom: 10px;
   }
   
-  
+  /* Responsive Styles */
+@media (max-width: 1200px) {
+  .recycling-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .recycling-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .recycling-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for smaller screens */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .recycling-card {
+    width: 100%;
+  }
+
+  .service-header {
+    height: 250px;
+  }
+
+  .servicetitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recycling-container {
+    grid-template-columns: 1fr; /* Single column for mobile screens */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .recycling-card img {
+    height: 200px;
+  }
+
+  .service-header {
+    height: 200px;
+  }
+
+  .servicetitle {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .category-description {
+    font-size: 0.9rem;
+  }
+}
