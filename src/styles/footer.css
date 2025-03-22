@@ -91,7 +91,7 @@
     font-size: 14px;
     color: #ddd;
   }
-  /* Responsive Styles */
+
 @media (max-width: 1200px) {
   .footer-container {
     flex-wrap: wrap;

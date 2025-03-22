@@ -16,7 +16,6 @@
     border-radius: 8px;
 }
 
-/* Navigation links */
 .nav-links {
     display: flex;
     flex-direction: row;
@@ -32,19 +31,19 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Menu icon (hamburger) */
+
 .menu-icon {
-    display: none; /* Initially hidden */
+    display: none;
     font-size: 2rem;
     cursor: pointer;
     color: black;
 }
 
 .menu-icon.open {
-    display: block; /* Visible when menu is toggled open */
+    display: block; 
 }
 
-/* Login button */
+
 .login {
     background-color: green;
     border: none;
@@ -55,13 +54,13 @@
     width: 8rem;
 }
 
-/* Responsive styles */
+
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 6rem; /* Adjusted for better alignment */
+        top: 6rem; 
         right: 0;
         background: white;
         width: 100%;
@@ -80,9 +79,9 @@
     }
 
     .menu-icon {
-        display: block; /* Make the icon appear */
+        display: block; 
         font-size: 3rem;
-        color: black; /* Set color */
+        color: black;
         cursor: pointer;
         z-index: 2000;
     }

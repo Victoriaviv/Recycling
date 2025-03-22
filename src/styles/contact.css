@@ -103,7 +103,7 @@
     background: #004f2e;
   }
   
-  /* Responsive Styles */
+
 @media (max-width: 1200px) {
   .contact-container {
     flex-direction: column;

@@ -128,7 +128,6 @@
     border-radius: 5px;
   }
   
-  /* Responsive Styles */
 @media (max-width: 1200px) {
   .blog-list {
     grid-template-columns: repeat(2, 1fr);
