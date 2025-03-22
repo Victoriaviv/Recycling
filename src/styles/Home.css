@@ -162,7 +162,7 @@
       width: 100%;
   }
   .features {
-      flex-direction: column; 
+      flex-direction: row; 
       align-items: center;
       gap: 30px; 
   }
@@ -170,5 +170,14 @@
       width: 80%;
       max-width: 400px;
   }
+  .home-container {
+  
+
+  height: 70vh;
+ 
+}
+.home-button {
+  width: 20rem;
+}
 }
 

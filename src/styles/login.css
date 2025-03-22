@@ -139,3 +139,64 @@ margin-top: -2rem;
     margin-top: -1.5rem;
     margin-left: 7rem;
 }
+@media screen and (max-width: 768px) {
+    .forms1{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        padding: 3rem;
+        font-size: 20px;
+        height: 70%;
+        margin-top: 5rem;
+       
+    }
+    .forms{
+        display: flex;
+        width: 30vh;
+        flex-direction: column;
+        gap: 2rem;
+        background-color:white;
+        border-radius: 10px;
+        padding: 3rem;
+        font-size: 20px;
+        height: 50%;
+        margin-top: 5rem;
+       
+    }
+    .iconclose{
+        position: absolute;
+       margin-left: 17rem;
+    margin-top: -2rem;
+        font-size: 24px;
+        cursor: pointer;
+       
+        color: black;
+    }
+    .button{
+        width: 20rem;
+        background-color:#47893A;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        margin-left: -1rem;
+        padding: 10px;
+        
+        
+        
+    }
+    .forms p{
+        color: black;
+        font-size: 17px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-left: 60px;
+        margin-top: 1rem;
+    }
+    .forms a{
+        color: black;
+        margin-top: -1.5rem;
+        margin-left: 6rem;
+    }
+
+}
