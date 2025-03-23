@@ -52,10 +52,10 @@ const Pages = () => {
         recyclable items based on the material they’re made of.
 
       </p>
-      <div className="buttons">
+      {/* <div className="buttons">
         <button className="get-started">GET STARTED</button>
         <button className="view-plans">VIEW OUR PLANS</button>
-      </div>
+      </div> */}
       <div className="steps-container">
         {steps.map((step) => (
           <div className="step-card" key={step.id}>

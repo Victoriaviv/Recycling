@@ -31,32 +31,12 @@ margin-bottom: 2rem;
   line-height: 2rem;
   margin-left: 45rem;
 margin-top: -10rem;
+margin-bottom: 5rem;
 
 }
 
-.buttons {
-  margin-top: 30px;
-  margin-left: 35rem;
-}
 
-.get-started, .view-plans {
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin: 5px;
-}
 
-.get-started {
-  background-color: #008000;
-  color: white;
-}
-
-.view-plans {
-  background-color: white;
-  color: #008000;
-}
 .steps-container p{
   font-size: 1.1rem;
   max-width: 700px;

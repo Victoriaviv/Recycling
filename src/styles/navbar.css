@@ -37,7 +37,7 @@
     font-size: 2rem;
     cursor: pointer;
     color: black;
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
 
 .menu-icon.open {
@@ -60,6 +60,7 @@
     .logo img {
         width: 5vh;
         border-radius: 10px;
+ margin-left: -3rem;
     }
     .nav-links {
         display: none;
@@ -81,7 +82,7 @@
 
     .login {
         width: 5rem;
-        margin-left: -3rem;
+        margin-left: 2rem;
     }
 
     .menu-icon {
