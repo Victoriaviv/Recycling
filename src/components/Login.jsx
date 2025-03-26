@@ -32,10 +32,10 @@ const Login = ({ changeModal }) => {
             const Role = userToken?.user?.userRole;
             if (Role === "Admin") {
                
-                 navigate("/Post");
+                 navigate("/Home");
             } else {
               
-             navigate("/Home");
+             navigate("/Post");
             }
         } catch (error) {
             console.log(error);
@@ -71,7 +71,7 @@ const Login = ({ changeModal }) => {
                     </a>
         </form>
            ) : (
-            <Register changeModal={changeModal} /> // Show Login component when state is false
+            <Register changeModal={changeModal} /> 
         )}
         </div>
     );

@@ -12,9 +12,7 @@ const Sidebar = () => {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            {/* <Link to="/" className="sidebar-link">
-              <FaHome className="icon" /> Home
-            </Link> */}
+           
           </li>
           <li>
             <Link to="/Post" className="sidebar-link">

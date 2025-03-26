@@ -37,19 +37,13 @@ const Register = ({ changeModal }) => {
             const userToken = response.data;
             localStorage.setItem("userToken", JSON.stringify(userToken));
 
-            // const Role = userToken?.User?.userRole;
-            // if (Role === "Admin") {
-            //     navigate("/Post");
-            // } else {
-            //     navigate("/Home");
-            // }
+            
         } catch (error) {
             console.log(error);
         }
     };
 
-    const [isSignup, setIsSignup] = useState(true); // Control state to switch between Login and Register forms
-
+    const [isSignup, setIsSignup] = useState(true); 
     return (
         <div className="formscontainer1">
             {isSignup ? (
@@ -85,7 +79,7 @@ const Register = ({ changeModal }) => {
                     </a>
                 </form>
             ) : (
-                <Login changeModal={changeModal} /> // Show Login component when state is false
+                <Login changeModal={changeModal} /> 
             )}
         </div>
     );

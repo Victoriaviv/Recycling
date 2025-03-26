@@ -1,93 +1,37 @@
-.comments-table-container {
-    width: 100%;
-    /* max-width: 800px; */
-    /* margin: 20px auto; */
-    padding: 20px;
-    margin-left: 10rem;
-   
-    /* margin-left: 25rem; */
-    
-  }
+.comments-section {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
   
-  .comments-table-container h2 {
-    /* text-align: center; */
-    margin-left: 25rem;
-    
-    margin-top: 5rem;
-  }
-  
-  .comments-table {
-    width: 60%;
-    margin-left: 10rem;
-    border-collapse: collapse;
-    background: white;
-    margin-top: 5rem;
-  }
-  
-  .comments-table th, .comments-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  .comments-table th {
-    background: #4CAF50;
-    color: white;
-  }
-  
-  .comments-table tr:hover {
-    background: #f1f1f1;
-  }
-  .active {
-    color: green;
-    font-weight: bold;
-  }
-  
-  .inactive {
-    color: red;
-    font-weight: bold;
-  }
-  
+}
 
-  .activate-btn {
-    padding: 5px 10px;
-    background: green;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 5px;
-  }
-  
-  .activate-btn:hover {
-    background: darkgreen;
-  }
-  
-  .deactivate-btn {
-    padding: 5px 10px;
-    background: orange;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 5px;
-  }
-  
-  .deactivate-btn:hover {
-    background: darkorange;
-  }
-  
-  
-  .delete-btn {
-    padding: 5px 10px;
-    background: red;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .delete-btn:hover {
-    background: darkred;
-  }
-  
+.comment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comment-table th, .comment-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.comment-table th {
+  background: #007bff;
+  color: white;
+}
+
+.comment-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
