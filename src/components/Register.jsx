@@ -5,7 +5,7 @@ import { Notify } from "notiflix";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
-import Login from "../components/Login.jsx"; // Import the Login component
+import Login from "../components/Login.jsx"; 
 
 const Register = ({ changeModal }) => {
     const navigate = useNavigate();

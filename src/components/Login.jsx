@@ -30,7 +30,7 @@ const Login = ({ changeModal }) => {
             const userToken = response.data;
             localStorage.setItem("userToken", JSON.stringify(userToken));
             const Role = userToken?.user?.userRole;
-            if (Role === "Admin") {
+            if (Role === "user") {
                
                  navigate("/Home");
             } else {

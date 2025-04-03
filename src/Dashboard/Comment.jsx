@@ -7,7 +7,7 @@ const CommentDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // ✅ Function to Fetch All Comments
+
   const fetchComments = async () => {
     setLoading(true);
     try {
@@ -21,7 +21,7 @@ const CommentDashboard = () => {
     }
   };
 
-  // ✅ Function to Delete a Comment
+
   const handleDelete = async (commentId) => {
     try {
       await axios.delete(`http://localhost:5000/comment/deleteComment/${commentId}`);
@@ -31,7 +31,7 @@ const CommentDashboard = () => {
     }
   };
 
-  // 🔄 Fetch Comments when Component Mounts
+  
   useEffect(() => {
     fetchComments();
   }, []);
