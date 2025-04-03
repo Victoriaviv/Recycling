@@ -47,44 +47,11 @@ The **Recycling & Waste Management Platform** is a web application designed to p
 
 ## 🚀 Getting Started
 
-### 🔧 Installation
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/your-username/recycling-platform.git
-   ```
-2. **Navigate to the project folder:**
-   ```sh
-   cd recycling-platform
-   ```
-3. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-4. **Run the development server:**
-   ```sh
-   npm run dev
-   ```
+Run Development Server
 
----
+npm install
+npm run dev
 
-## 📡 API Endpoints
-
-### 🔑 Authentication
-- `POST /api/auth/register` → Register a new user
-- `POST /api/auth/login` → Authenticate user
-
-### 🗑️ Waste Management
-- `GET /api/posts` → Fetch all posts
-- `POST /api/posts` → Create a new post (Admin only)
-
-### 👥 User Management
-- `GET /api/users` → Fetch all users (Admin only)
-- `PATCH /api/users/:id` → Activate/deactivate a user (Admin only)
-
----
-
-## 📸 Screenshots
-![Dashboard Preview](./screenshots/dashboard.png)
 
 ---
 
@@ -105,4 +72,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## 📞 Contact
-For inquiries, reach out via email: [your-email@example.com](mailto:your-email@example.com)
+For inquiries, reach out via email: [your-email@example.com](mailto:victoriadufatanye2@gmail.com.com)
