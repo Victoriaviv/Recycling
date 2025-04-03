@@ -72,4 +72,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## 📞 Contact
-For inquiries, reach out via email: [your-email@example.com](mailto:victoriadufatanye2@gmail.com.com)
+For inquiries, reach out via email: [victoriadufatanye2@gmail.com](mailto:victoriadufatanye2@gmail.com.com)
