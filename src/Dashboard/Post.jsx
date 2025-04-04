@@ -17,11 +17,11 @@ const Post = ({ isAdmin }) => {
   const [posts, setPosts] = useState([]);
   const [post, setPost] = useState({ category: "", title: "", content: "", images: null });
 
-  
+   const token = localStorage.getItem("userToken");
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://ecohub-2.onrender.com/blog/getAllblog");
+        const res = await axios.get("http://localhost:5000/blog/getAllblog");
 
         console.log("API Response:", res.data); 
 
@@ -59,15 +59,17 @@ const Post = ({ isAdmin }) => {
 
     try {
       const formData = new FormData();
-      formData.append("title", post.title);
-      formData.append("category", post.category);
-      formData.append("content", post.content);
+      formData.append("Title", post.title);
+      // formData.append("category", post.category);
+      formData.append("Description", post.content);
       if (post.images) {
-        formData.append("images", post.image);
+        formData.append("images", post.images);
       }
 
-      const response = await axios.post("https://ecohub-2.onrender.com/blog/createBlog", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+      const response = await axios.post("http://localhost:5000/blog/createBlog", formData, {
+        headers: { "Content-Type": "multipart/form-data",
+          "Authorization": `Bearer ${token}`
+         },
       });
 
       if (response.data.success && response.data.blog) {
@@ -87,7 +89,7 @@ const Post = ({ isAdmin }) => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {
-        await axios.delete(`https://ecohub-2.onrender.com/blog/deleteBlogById/${id}`);
+        await axios.delete(`http://localhost:5000/blog/deleteBlogById/${id}`);
         setPosts(posts.filter(post => post._id !== id));
         alert("Post deleted successfully!");
       } catch (error) {
@@ -100,7 +102,7 @@ const Post = ({ isAdmin }) => {
  
   const handleUnpublish = async (id) => {
     try {
-      await axios.patch(`https://ecohub-2.onrender.com/blog/update/${id}`, { status: "Unpublished" });
+      await axios.patch(`http://localhost:5000/blog/update/${id}`, { status: "Unpublished" });
       setPosts(posts.map(post => (post._id === id ? { ...post, status: "Unpublished" } : post)));
       alert("Post unpublished.");
     } catch (error) {
@@ -163,12 +165,12 @@ const Post = ({ isAdmin }) => {
                 <IoMdArrowRoundBack /> Back
               </button>
               <form onSubmit={handleSubmit} className="post-form">
-                <label>Category</label>
+                {/* <label>Category</label>
                 <select name="category" onChange={handleChange}>
                   <option value="">Select a category</option>
                   <option value="Community">Community</option>
                   <option value="Education">Education</option>
-                </select>
+                </select> */}
 
                 <label>Title</label>
                 <input type="text" name="title" onChange={handleChange} />
@@ -178,9 +180,9 @@ const Post = ({ isAdmin }) => {
 
                 <label>Featured Image</label>
                 <input type="file" onChange={handleImageUpload} />
-                {post.image && (
+                {post.images && (
                   <img
-                    src={post.image instanceof File ? URL.createObjectURL(post.image) : post.image}
+                    src={post.images instanceof File ? URL.createObjectURL(post.images) : post.images}
                     alt="Preview"
                     className="preview-image"
                   />

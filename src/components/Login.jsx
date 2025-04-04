@@ -7,7 +7,7 @@ import { Notify } from "notiflix";
 import Register from "./Register";
 import { IoClose } from "react-icons/io5";
 
-const Login = ({ changeModal }) => {
+const Login = ({ changeModal, setUser }) => {
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
@@ -17,24 +17,21 @@ const Login = ({ changeModal }) => {
             const formData = new FormData();
             formData.append("userEmail", userEmail);
             formData.append("userPassword", userPassword);
-
-            const response = await axios.post(`https://ecohub-2.onrender.com/user/login`, formData, {
+            const response = await axios.post(`http://localhost:5000/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
             });
-
             Notify.success("Login successful");
             reset();
-            
-            const userToken = response.data;
-            localStorage.setItem("userToken", JSON.stringify(userToken));
-            const Role = userToken?.user?.userRole;
-            if (Role === "user") {
-               
+            localStorage.setItem("userToken", response.data?.user?.token);
+            localStorage.setItem("user", JSON.stringify(response.data?.user?.user));
+            const Role = response.data?.user?.user?.userRole;
+            setUser(response.data?.user?.user);
+            changeModal();
+            if (Role === "user") { 
                  navigate("/Home");
-            } else {
-              
+            } else if (Role === "Admin") {
              navigate("/Post");
             }
         } catch (error) {
