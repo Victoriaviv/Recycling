@@ -21,7 +21,7 @@ const Post = ({ isAdmin }) => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/blog/getAllblog");
+        const res = await axios.get("https://ecohub-2.onrender.com/blog/getAllblog");
 
         console.log("API Response:", res.data); 
 
@@ -66,7 +66,7 @@ const Post = ({ isAdmin }) => {
         formData.append("images", post.images);
       }
 
-      const response = await axios.post("http://localhost:5000/blog/createBlog", formData, {
+      const response = await axios.post("https://ecohub-2.onrender.com/blog/createBlog", formData, {
         headers: { "Content-Type": "multipart/form-data",
           "Authorization": `Bearer ${token}`
          },
@@ -89,7 +89,7 @@ const Post = ({ isAdmin }) => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {
-        await axios.delete(`http://localhost:5000/blog/deleteBlogById/${id}`);
+        await axios.delete(`https://ecohub-2.onrender.com/blog/deleteBlogById/${id}`);
         setPosts(posts.filter(post => post._id !== id));
         alert("Post deleted successfully!");
       } catch (error) {
@@ -102,7 +102,7 @@ const Post = ({ isAdmin }) => {
  
   const handleUnpublish = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/blog/update/${id}`, { status: "Unpublished" });
+      await axios.patch(`https://ecohub-2.onrender.com/blog/update/${id}`, { status: "Unpublished" });
       setPosts(posts.map(post => (post._id === id ? { ...post, status: "Unpublished" } : post)));
       alert("Post unpublished.");
     } catch (error) {

@@ -9,7 +9,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const getuserprofile = async () => {
     let token = localStorage.getItem("userToken");
-    const response = await axios.get(`http://localhost:5000/user/profile`,{
+    const response = await axios.get(`https://ecohub-2.onrender.com/user/profile`,{
       headers: {
           "Content-Type": "application/json",
           'Authorization':`Bearer ${token}`,
